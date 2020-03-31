@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+
+    <!-- android-->
+    <meta property="al:android:url" content="https://play.google.com/store/apps/details?id=com.softtech.scanandtranslate">
+    <meta property="al:android:package" content="com.softtech.scanandtranslate">
+    <meta property="al:android:app_name" content="Scan and Translate">
+    <!-- end android-->
+
+    <meta property="og:title" content="Scan and Translate" />
+	<meta property="og:image" content="http://admin.hamtruyen.vn/Pictures/Truyen/Large/one_piece.png">
+    <meta property="og:type" content="website" />
+    <title>meta</title>
+   
+</head>
+<body>
+<div>
+<img src="http://wallpapercave.com/wp/KtB2HSq.jpg"
+style=" width:100%; height="100%" ">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+admin-datatable md-toolbar.md-table-toolbar form {
+  margin-left: 16px;
+  margin-bottom: 0;
+}
+admin-datatable md-toolbar.md-table-toolbar form > input {
+  width: 100%;
+  margin: 0;
+  border: none;
+  color: rgba(0, 0, 0, 0.87);
+}

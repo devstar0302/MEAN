@@ -1,0 +1,49 @@
+<md-toolbar class="md-accent" layout="row" md-whiteframe="1">
+    <div class="md-toolbar-tools right">
+        <md-button hide-gt-sm class="md-icon-button md-big" ng-click="vm.buildToggler('left')"><md-icon md-font-set="material-icons">menu</md-icon></md-button>
+        <img hide-gt-sm style="max-width: 10%;" src=img/logo.jpg alt="">
+        <div flex></div>
+        <div layout="row" layout-align="end center">
+            <md-menu md-position-mode="target bottom">
+                <md-button class="md-big md-icon-button" ng-click="$mdOpenMenu()">
+                    <md-icon md-font-set="material-icons">notifications_active</md-icon>
+                    <md-badge class="md-warn">100</md-badge>
+                </md-button>
+                <md-menu-content width="3">
+                    <md-menu-item>
+                        <md-button ui-sref-active="md-raised" ui-sref="settings">
+                            <md-icon md-font-set="material-icons">person</md-icon>My Profile
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-divider></md-menu-divider>
+                    <md-menu-item>
+                        <md-button ui-sref="logout" ui-sref-active="md-raised">
+                            <md-icon class="" md-font-set="material-icons">exit_to_app</md-icon>Log out
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <md-menu md-position-mode="target bottom">
+                <md-button class="md-big" ng-click="$mdOpenMenu()">
+                    <md-list-item>
+                        <img ng-src="img/profile.jpg" class="md-avatar" alt="" />
+                        <md-icon md-font-set="material-icons">keyboard_arrow_down</md-icon>
+                    </md-list-item>
+                </md-button>
+                <md-menu-content width="3">
+                    <md-menu-item>
+                        <md-button ui-sref-active="md-raised" ui-sref="settings">
+                            <md-icon md-font-set="material-icons">person</md-icon>My Profile
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-divider></md-menu-divider>
+                    <md-menu-item>
+                        <md-button ng-click="vm.logout()" ui-sref-active="md-raised">
+                            <md-icon class="" md-font-set="material-icons">exit_to_app</md-icon>Log out
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+        </div>
+    </div>
+</md-toolbar>

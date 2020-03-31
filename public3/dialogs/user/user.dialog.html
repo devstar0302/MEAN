@@ -1,0 +1,46 @@
+<md-card style="display: block;">
+    <form name="form" ng-submit="vm.create(form)" novalidate="">
+        <md-toolbar class="md-accent">
+            <div class="md-toolbar-tools">
+                <md-button ng-click="vm.close()" class="md-icon-button">
+                    <md-tooltip md-direction="top" md-autohide="true">Close Dialog</md-tooltip>
+                    <md-icon md-font-set="material-icons">arrow_back</md-icon>
+                </md-button>
+                <h2 ng-bind-html="(vm.edit ? &quot;Edit&quot; : &quot;Add new&quot;)+&quot; users&quot;" class="md-title"></h2><span flex=""></span>
+                <md-button type="submit" class="md-icon-button">
+                    <md-tooltip md-direction="top" md-autohide="true">{{vm.edit ? 'Update' : 'Save'}}</md-tooltip>
+                    <md-icon md-font-set="material-icons">save</md-icon>
+                </md-button>
+                <md-button type="submit" ng-click="vm.closeSave = form.$valid" ng-if="!vm.edit" class="md-icon-button">
+                    <md-tooltip md-direction="top" md-autohide="true">Save and Close</md-tooltip>
+                    <md-icon md-font-set="material-icons">exit_to_app</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <div layout="column">
+            <md-input-container class="md-block">
+                <label>Email</label>
+                <md-icon md-font-set="material-icons">email</md-icon>
+                <input required type="email" name="email" ng-model="vm.data.email"
+                       minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+                <div ng-messages="form.email.$error" role="alert">
+                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                        Your email must be between 10 and 100 characters long and look like an e-mail address.
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Role</label>
+                <md-icon md-font-set="material-icons">email</md-icon>
+                <md-select name="roleId" ng-model="vm.data.roleId" placeholder="Choose role" required="">
+                    <md-option ng-repeat="role in vm.listRole" ng-value="role.type" >{{role.typeName}}</md-option>
+                </md-select>
+                <div ng-messages="form.roleId.$error">
+                    <div ng-message="required">This is required.</div>
+                </div>
+            </md-input-container>
+
+        </div>
+    </form>
+</md-card>

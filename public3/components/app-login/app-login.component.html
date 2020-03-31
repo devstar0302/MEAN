@@ -1,0 +1,45 @@
+<img hide-gt-sm src=img/logo.jpg alt="">
+<h2 class="md-title">Log in to your account<br>
+    <small>Sed mollis velit facilisis facilisis viverra</small>
+</h2>
+<form name="form" ng-submit="vm.login(form.$invalid || form.$pristine)" novalidate="" layout="column">
+    <md-input-container class="md-block">
+        <label>Email</label>
+        <md-icon md-font-set="material-icons">email</md-icon>
+        <input required type="email" name="email" ng-model="vm.user.email"
+               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+        <div ng-messages="form.email.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                Your email must be between 10 and 100 characters long and look like an e-mail address.
+            </div>
+        </div>
+    </md-input-container>
+    <md-input-container class="md-block">
+        <label>Password</label>
+        <md-icon md-font-set="material-icons">vpn_key</md-icon>
+        <input required type="password" name="password" ng-model="vm.user.password">
+        <div ng-messages="form.password.$error">
+            <div ng-message="required">This is required.</div>
+        </div>
+    </md-input-container>
+    <div layout="row" layout-sm="column" layout-align="space-between center">
+        <md-checkbox ng-model="vm.RememberMe" aria-label="Remember Me" style="margin-bottom: 0;">
+            Remember Me
+        </md-checkbox>
+        <md-button class="md-primary">Forgot Password?</md-button>
+    </div>
+    <md-button class="md-raised md-warn" type="submit" aria-label="LOG IN"
+               ng-disabled="form.$invalid || form.$pristine">LOG IN
+    </md-button>
+</form>
+
+<div layout="row" layout-align="center center" layout-padding=""><span>-- OR --</span></div>
+<div layout="column" layout-align="center" class="font-small">
+    <md-button style="background-color: #D73D32;" class="md-raised md-warn"><i class="fa fa-google-plus" aria-hidden="true"></i> Log in with Google</md-button>
+    <md-button style="background-color: #3f5c9a;" class="md-raised md-warn"><i class="fa fa-facebook" aria-hidden="true"></i> Log in with Facebook</md-button>
+</div>
+<div layout="row" layout-align="center center" class="font-small">
+    <span>Don't have an account?</span>
+    <md-button class="md-warn" ui-sref="login.register">Create an account</md-button>
+</div>

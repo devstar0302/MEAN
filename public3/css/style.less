@@ -1,0 +1,121 @@
+@import "../vendor/angular-material/angular-material.css";
+@import "../vendor/angular-material-sidenav/angular-material-sidenav.css";
+@import "../vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css";
+@import "../vendor/angular-material-data-table/dist/md-data-table.min.css";
+@import "../vendor/components-font-awesome/less/font-awesome";
+@import "../vendor/slick-carousel/slick/slick.css";
+@import "../vendor/ng-directive-lazy-image/release/lazy-image-style.min.css";
+@import "../vendor/angular-loading-bar/build/loading-bar.min.css";
+@import "../vendor/please-wait/build/please-wait.css";
+@import "../directives/material-pagination/material-pagination";
+@import "../components/app-header/app-header";
+@import "../components/app-footer/app-footer";
+@import "../components/app-menu-mega/app-menu-mega";
+@import "../components/app-slideshow/app-slideshow";
+@import "../components/app-grid-list/app-grid-list";
+@import "../components/app-login/app-login";
+@import "../components/admin-sidenav/admin-sidenav";
+@import "../components/admin-datatable/admin-datatable";
+@import "../components/admin-users/admin-users";
+body{  font-family: Roboto,"Helvetica Neue",Arial,sans-serif;  }
+md-tabs-canvas .md-dummy-wrapper {display: none!important;}
+h1.md-title{font-size: 35px}
+.logo{margin: 0 10px 0 0}
+.md-button{
+  &.md-big{
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+    margin: 0;
+    border-radius: 0;
+    @media (max-width: 959px) and (min-width: 0) and (orientation: portrait){
+      height: 56px;
+      min-width: 56px;
+      min-height: 56px;
+    }
+    @media (max-width: 959px) and (min-width: 0) and (orientation: landscape){
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+    }
+    .md-icon-button{
+      width: 64px;
+      @media (max-width: 959px) and (min-width: 0) and (orientation: portrait){ width: 56px; }
+      @media (max-width: 959px) and (min-width: 0) and (orientation: landscape){ width: 48px; }
+    }
+  }
+  .md-ripple-container{border-radius: 0}
+}
+
+body > .inner {  display: none;  }
+body.pg-loaded > .inner {  display: block;  }
+.pg-loading-screen .pg-loading-html {  margin-top: 30px;  }
+.pg-loading-screen .pg-loading-html p.loading-message{
+  font-size: 20px;
+  margin-bottom: 100px;
+  color: #FFF;
+  font-weight: 300
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 150, 136,0.8);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+}
+md-toolbar.md-warn:not(.md-menu-toolbar) md-icon{color: rgb(255,255,255);}
+.slick-slide{
+  height: inherit;
+  padding: 0 1%;
+  img{width: 100%;}
+}
+.header-admin{
+  height: 160px;
+  min-height: 160px;
+  max-height: 160px;
+  padding: 0 24px;
+  background-image: url('../img/header-bg.png');
+  background-size: cover;
+  background-color:  #009688;
+  color: #ffffff;
+  .company-name{
+    background: rgba(0,0,0,.12);
+    color: #FFF;
+    padding: 8px 16px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+  }
+}

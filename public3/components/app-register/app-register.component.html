@@ -1,0 +1,60 @@
+<img hide-gt-sm src=img/logo.jpg alt="">
+<h2 class="md-title">Create an account<br>
+    <small>Sed mollis velit facilisis facilisis viverra</small>
+</h2>
+<form name="form" novalidate="" layout="column">
+    <md-input-container class="md-block">
+        <label>Name</label>
+        <md-icon md-font-set="material-icons">person</md-icon>
+        <input required type="text" name="name" ng-model="vm.name">
+        <div ng-messages="form.name.$error">
+            <div ng-hide="!form.name.$error.required" ng-message="required">This is required.</div>
+        </div>
+    </md-input-container>
+    <md-input-container class="md-block">
+        <label>Email</label>
+        <md-icon md-font-set="material-icons">email</md-icon>
+        <input required type="email" name="email" ng-model="vm.email"
+               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+        <div ng-messages="form.email.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                Your email must be between 10 and 100 characters long and look like an e-mail address.
+            </div>
+        </div>
+    </md-input-container>
+    <md-input-container class="md-block">
+        <label>Password</label>
+        <md-icon md-font-set="material-icons">vpn_key</md-icon>
+        <input required type="password" name="password" ng-model="vm.password">
+        <div ng-messages="form.password.$error">
+            <div ng-message="required">This is required.</div>
+        </div>
+    </md-input-container>
+    <md-input-container class="md-block">
+        <label>Password (Confirm)</label>
+        <md-icon md-font-set="material-icons">vpn_key</md-icon>
+        <input match-password="password"  required type="password" name="passwordConfirm" ng-model="vm.passwordConfirm">
+        <div ng-messages="form.passwordConfirm.$error">
+            <div ng-message="required">This is required.</div>
+            <div ng-message="passwordMatch" class="message slide-left">Your passwords did not match</div>
+        </div>
+    </md-input-container>
+    <md-input-container class="md-block">
+        <md-checkbox ng-model="vm.terms" name="terms" required="" aria-label="Remember Me" style="margin-bottom: 0;">
+            I read and accept <a href="javascript:" style="color: rgb(0,150,136)">terms and conditions</a>
+        </md-checkbox>
+        <div ng-messages="form.terms.$error" multiple md-auto-hide="false">
+            <div ng-message="required">
+                You must accept the terms of service before you can proceed.
+            </div>
+        </div>
+    </md-input-container>
+    <md-button class="md-raised md-warn" type="submit" aria-label="LOG IN"
+               ng-disabled="form.$invalid || form.$pristine">LOG IN
+    </md-button>
+</form>
+<div layout="row" layout-align="center center" class="font-small">
+    <span>Already have an account?</span>
+    <md-button class="md-warn" ui-sref="login.index">Log in</md-button>
+</div>

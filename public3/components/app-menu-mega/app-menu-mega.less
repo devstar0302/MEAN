@@ -1,0 +1,44 @@
+md-list.app-menu-mega{
+  background-color: rgb(0,150,136);
+  color: rgb(255,255,255);
+  md-list-item,  md-list-item .md-list-item-inner{
+    min-height: 40px;
+    &:before{      min-height: 40px;  }
+    .material-icons{    color: rgb(255,255,255);  }
+  }
+}
+md-menu-content.menu-mega {
+  max-height: inherit;
+  min-width: 680px;
+  padding: 16px 0;
+  md-toolbar {min-height: 40px;}
+  .md-toolbar-tools{
+    font-size: 16px;
+    height: inherit;
+    max-height: inherit;
+    .md-avatar{
+      margin-top: 8px;
+      margin-bottom: 8px;
+      margin-right: 16px;
+      border-radius: 50%;
+      box-sizing: content-box;
+      -webkit-box-flex: 0;
+      -webkit-flex: none;
+      flex: none;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  md-menu-item{
+    height: inherit;
+    md-list-item._md-button-wrap {
+      height: 30px;
+      min-height: inherit;
+      font-size: 14px;
+      .md-no-style.md-button{
+        height: 30px;
+        min-height: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+<div layout-sm="column" layout-gt-md="row">
+    <div layout-xs="column" layout-gt-sm="row" flex-xs="1" flex-gt-md="40">
+        <div class="md-block" layout="column" flex-xs="1" flex-gt-sm="50">
+            <h3 class="md-title">
+                <md-icon md-font-set="material-icons">notifications</md-icon>
+                EMH Alert
+            </h3>
+            <form name="form" layout-margin>
+                <p>Register now to get updates on promotions and coupons</p>
+                <md-input-container class="md-block" md-theme="dark">
+                    <label>Email</label>
+                    <input type="email" required name="email" ng-model="vm.email">
+                    <div ng-messages="form.email.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block" md-theme="dark">
+                    <label>Name</label>
+                    <input type="text" name="Name" ng-model="vm.name">
+                </md-input-container>
+                <md-button class="md-raised md-accent">
+                    <md-icon md-font-set="material-icons">email</md-icon>
+                    Subscribe
+                </md-button>
+            </form>
+        </div>
+        <div class="md-block" layout="column" flex-xs="1" flex-gt-sm="50">
+            <h3 class="md-title">
+                <md-icon md-font-set="material-icons">business_center</md-icon>
+                Turn Your Passion Into a Business
+            </h3>
+            <div layout="row" layout-align="center center">
+                <md-button class="md-raised md-accent">
+                    <md-icon md-font-set="material-icons">store</md-icon>
+                    Open a Shop
+                </md-button>
+                <md-button class="md-raised">
+                    Seller login
+                </md-button>
+            </div>
+            <h3 class="md-title">
+                <md-icon md-font-set="material-icons">info</md-icon>
+                Customer Service
+            </h3>
+            <md-list>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">email</md-icon>
+                    <p>Contact Us</p>
+                </md-list-item>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">help</md-icon>
+                    <p>Help</p>
+                </md-list-item>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">question_answer</md-icon>
+                    <p>FAQs</p>
+                </md-list-item>
+            </md-list>
+        </div>
+    </div>
+    <div layout-xs="column" layout-gt-sm="row" flex-xs="1" flex-gt-md="60">
+        <div class="md-block" layout="column" flex-xs="1" flex-gt-sm="33">
+            <h3 class="md-title">
+                <md-icon md-font-set="material-icons">info</md-icon>
+                Information
+            </h3>
+            <md-list>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">chrome_reader_mode</md-icon>
+                    <p>About Equality Mode House</p>
+                </md-list-item>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">chrome_reader_mode</md-icon>
+                    <p>Delivery Information</p>
+                </md-list-item>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">verified_user</md-icon>
+                    <p>Privacy Policy</p>
+                </md-list-item>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">verified_user</md-icon>
+                    <p>Terms & Conditions</p>
+                </md-list-item>
+            </md-list>
+        </div>
+        <div class="md-block" layout="column" flex-xs="1" flex-gt-sm="33">
+            <h3 class="md-title">
+                <md-icon md-font-set="material-icons">share</md-icon>
+                Stay Connected
+            </h3>
+            <md-list>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">face</md-icon>
+                    <p>Facebook</p>
+                </md-list-item>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">face</md-icon>
+                    <p>YouTube</p>
+                </md-list-item>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">forum</md-icon>
+                    <p>Our Community</p>
+                </md-list-item>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">group</md-icon>
+                    <p>Emh Private Daily Profiles</p>
+                </md-list-item>
+            </md-list>
+        </div>
+        <div class="md-block" layout="column" flex-xs="1" flex-gt-sm="33">
+            <h3 class="md-title">
+                <md-icon md-font-set="material-icons">account_circle</md-icon>
+                My Account
+            </h3>
+            <md-list>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">account_circle</md-icon>
+                    <p>My Account</p>
+                </md-list-item>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">history</md-icon>
+                    <p>Order History</p>
+                </md-list-item>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">favorite</md-icon>
+                    <p>Wish List</p>
+                </md-list-item>
+                <md-list-item ng-href="javascript:">
+                    <md-icon md-font-set="material-icons">new_releases</md-icon>
+                    <p>Newsletter</p>
+                </md-list-item>
+            </md-list>
+        </div>
+    </div>
+</div>
+<div><p>Out Referrer Partners:<p/></div>
+<div>
+    <slick arrows="false" autoplay-speed="2000" autoplay="true" slides-to-show="4" touch-move="true" slides-to-scroll="1">
+        <div><img src="img/parnent.png" alt=""></div>
+        <div><img src="img/parnent.png" alt=""></div>
+        <div><img src="img/parnent.png" alt=""></div>
+        <div><img src="img/parnent.png" alt=""></div>
+        <div><img src="img/parnent.png" alt=""></div>
+        <div><img src="img/parnent.png" alt=""></div>
+    </slick>
+</div>
+<div>www.equalitymodehouse.com is the first online shopping mail and fully dedicated to fashion</div>
+<div>ở đây thêm cái đồng hồ lấy log giờ server</div>
+<md-toolbar class="md-accent" layout="row">
+    <div class="md-toolbar-tools right">
+        <h3 class="md-title">
+            Copyrights <md-icon md-font-set="material-icons">copyright</md-icon>
+            Economics 2017. All Right Reserved.
+        </h3>
+    </div>
+</md-toolbar>

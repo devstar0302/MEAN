@@ -1,0 +1,62 @@
+app-grid-list{
+  > md-card:first-child{  background-color: #009688;  }
+  md-grid-tile {
+    overflow: hidden;
+    transition: all 400ms ease-out 50ms;
+    figure{
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      align-items: flex-end;
+      -webkit-align-content: flex-end;
+      align-content: flex-end;
+      md-grid-tile-header{
+        background: rgb(0, 0, 0);
+        figcaption{
+          text-transform: uppercase;
+          text-align: center;
+          width: 100%;
+        }
+        h3{
+          @media (max-width: 1367px){font-size: 13px;}
+          @media (max-width: 360px){font-size: 11px;}
+        }
+      }
+      md-grid-tile-footer{
+        opacity: 0.5;
+        height: 18%;
+      }
+
+    }
+  }
+  md-grid-tile img{  width: 100%;  }
+  md-tabs-canvas.md-center-tabs {
+    md-pagination-wrapper{
+      //margin: 0 auto;
+      .md-tab{
+        border-radius: 24px;
+        background-color: rgba(0, 0, 0, 0.24);
+        width: 48px;
+        padding: 12px 0;
+        font-size: 16px;
+        margin: 0 0.7%;
+        .md-ripple-container{      border-radius: 24px;  }
+        &.md-active{
+          background-color: #009688;
+          color: #ffffff
+        }
+      }
+      md-ink-bar{
+        background-color: #009688;
+        height: 48px;
+        width: 48px;
+        border-radius: 24px;
+        z-index: -1;
+      }
+      .md-button.md-icon-button{
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+  }
+}

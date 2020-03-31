@@ -1,0 +1,31 @@
+app-header{
+  md-sidenav.md-warn{background-color: #009688;}
+  .md-subheader .md-subheader-inner{
+    padding: 0;
+    .md-toolbar-tools{
+      height: inherit;
+      max-height: 110px;
+      &.right{  padding: 0;  }
+      .logo{
+        margin: 0 10px;
+        width: 40px;
+        height: 60px;
+        @media (max-width: 567px){
+          height: 40px;
+        }
+      }
+      .md-title{
+        font-size: 40px;
+        @media (max-width: 567px){ font-size: 20px;  }
+      }
+      >.md-button:first-child{    margin-left: 0;}
+      > .md-button:last-child {margin-right: 0;}
+      form{
+        margin-bottom: 0;
+        margin-top: 17px;
+        md-input-container{  margin: 0;}
+      }
+    }
+  }
+
+}

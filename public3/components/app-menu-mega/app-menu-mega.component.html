@@ -1,0 +1,69 @@
+<md-list class="app-menu-mega" hide-xs hide-sm>
+    <md-list-item ng-repeat="menu in ['Accessory', 'Jewelley','Shoes','Cosmetic','Handmade','Haute Couture','Horology','Lingerle','Wedding','Perfumery','Ready To Wear','Bag','Wax Clothe','All Categories']">
+        <p>{{menu}}</p>
+        <md-menu class="md-secondary" md-position-mode="cascade">
+            <md-button class="md-icon-button">
+                <md-icon class="logo" md-font-set="material-icons">keyboard_arrow_right</md-icon>
+            </md-button>
+            <md-menu-content width="6" class="menu-mega">
+                <md-menu-item>
+                    <div layout="column" flex>
+                        <md-toolbar layout="row" >
+                            <div class="md-toolbar-tools">
+                                <img ng-src="img/profile.jpg" class="md-avatar" alt="" />
+                                <span>Sub Category 1</span>
+                            </div>
+                        </md-toolbar>
+                        <md-list>
+                            <md-list-item ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]" ng-click="console.log(item)">
+                                Children sub category {{item}}
+                            </md-list-item>
+                        </md-list>
+                    </div>
+                    
+                    <div layout="column" flex>
+                        <md-toolbar layout="row" >
+                            <div class="md-toolbar-tools">
+                                <img ng-src="img/profile.jpg" class="md-avatar" alt="" />
+                                <span>Sub Category 2</span>
+                            </div>
+                        </md-toolbar>
+                        <md-list>
+                            <md-list-item ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]" ng-click="console.log(item)">
+                                Children sub category {{item}}
+                            </md-list-item>
+                        </md-list>
+                    </div>
+                </md-menu-item>
+                <md-menu-item>
+                    <div layout="column" flex>
+                        <md-toolbar layout="row" >
+                            <div class="md-toolbar-tools">
+                                <img ng-src="img/profile.jpg" class="md-avatar" alt="" />
+                                <span>Sub Category 3</span>
+                            </div>
+                        </md-toolbar>
+                        <md-list>
+                            <md-list-item ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]" ng-click="console.log(item)">
+                                Children sub category {{item}}
+                            </md-list-item>
+                        </md-list>
+                    </div>
+                    <div layout="column" flex>
+                        <md-toolbar layout="row" >
+                            <div class="md-toolbar-tools">
+                                <img ng-src="img/profile.jpg" class="md-avatar" alt="" />
+                                <span>Sub Category 4</span>
+                            </div>
+                        </md-toolbar>
+                        <md-list>
+                            <md-list-item ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]" ng-click="console.log(item)">
+                                Children sub category {{item}}
+                            </md-list-item>
+                        </md-list>
+                    </div>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </md-list-item>
+</md-list>

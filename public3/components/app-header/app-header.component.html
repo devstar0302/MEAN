@@ -1,0 +1,119 @@
+<md-sidenav class="md-sidenav-left md-warn" md-component-id="left">
+    <md-toolbar class="md-accent" md-whiteframe="1">
+        <h1 class="md-toolbar-tools">
+            <md-icon class="logo" md-font-set="material-icons">assignment</md-icon>
+            List Categories
+        </h1>
+    </md-toolbar>
+    <md-list class="app-menu-mega">
+        <md-list-item ng-href="javascript:" ng-repeat="menu in ['Accessory','Jewelley','Shoes','Cosmetic','Handmade','Haute Couture','Horology','Lingerle','Wedding','Perfumery','Ready To Wear','Bag','Wax Clothe','All Categories']">
+            <p>{{menu}}</p>
+        </md-list-item>
+    </md-list>
+</md-sidenav>
+<md-sidenav class="md-sidenav-right md-warn" md-component-id="right">
+    <form name="form" layout="column" class="md-padding">
+        <md-input-container md-theme="dark">
+            <label>Search</label>
+            <input required name="search" ng-model="vm.search">
+            <div ng-messages="form.search.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container md-theme="dark">
+            <label></label>
+            <md-select aria-label="Category" ng-model="vm.category" ng-init="vm.category = 0">
+                <md-option value="0">All Categories</md-option>
+                <md-option ng-repeat="select in [1,2,3,4,5]" ng-value="select">Category {{select}}</md-option>
+            </md-select>
+        </md-input-container>
+        <md-button><md-icon md-font-set="material-icons">search</md-icon> Search Product</md-button>
+    </form>
+    <md-list>
+        <md-list-item ng-href="javascript:">
+            <md-icon md-font-set="material-icons">description</md-icon>
+            <p>EMH Private Sale</p>
+        </md-list-item>
+        <md-list-item ng-href="javascript:">
+            <md-icon md-font-set="material-icons">public</md-icon>
+            <p>News</p>
+        </md-list-item>
+        <md-list-item ng-href="javascript:">
+            <md-icon md-font-set="material-icons">local_shipping</md-icon>
+            <p>Free Delivery</p>
+        </md-list-item>
+        <md-list-item ui-sref="login.index">
+            <md-icon md-font-set="material-icons">lock</md-icon>
+            <p>Login</p>
+        </md-list-item>
+        <md-list-item ui-sref="login.register">
+            <md-icon md-font-set="material-icons">person</md-icon>
+            <p>Sign Up</p>
+        </md-list-item>
+    </md-list>
+</md-sidenav>
+
+<md-subheader class="md-no-sticky" layout="column">
+    <md-toolbar class="md-accent" layout="row" md-whiteframe="1">
+        <div class="md-toolbar-tools right">
+            <md-button hide-gt-sm class="md-icon-button md-big" ng-click="vm.buildToggler('left')"><md-icon md-font-set="material-icons">menu</md-icon></md-button>
+            <div hide-gt-sm class="toolbar-separator"></div>
+            <img style="max-width: 40%;" src=img/logo.jpg alt="">
+            <div flex></div>
+            <div layout="column" hide-xs hide-sm>
+                <div layout="row">
+                    <md-button>
+                        <md-icon md-font-set="material-icons">description</md-icon>
+                        EMH Private Sale
+                    </md-button>
+                    <md-button>
+                        <md-icon md-font-set="material-icons">public</md-icon>
+                        News
+                    </md-button>
+                    <md-button>
+                        <md-icon md-font-set="material-icons">local_shipping</md-icon>
+                        Free Delivery
+                    </md-button>
+                    <md-button ui-sref="login.index">
+                        <md-icon md-font-set="material-icons">lock</md-icon>
+                        Login
+                    </md-button>
+                    <md-button ui-sref="login.register">
+                        <md-icon md-font-set="material-icons">person</md-icon>
+                        Sign Up
+                    </md-button>
+                </div>
+                <div layout="row" layout-align="end center">
+                    <form name="form">
+                        <div layout="row">
+                            <md-input-container md-theme="dark">
+                                <label>Search</label>
+                                <input required name="search" ng-model="vm.search">
+                                <div ng-messages="form.search.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container md-theme="dark">
+                                <label></label>
+                                <md-select aria-label="Category" ng-model="vm.category" ng-init="vm.category = 0">
+                                    <md-option ng-value="0">All Categories</md-option>
+                                    <md-option ng-repeat="select in [1,2,3,4,5]" ng-value="select">Category {{select}}</md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-button class="md-icon-button"><md-icon md-font-set="material-icons">search</md-icon></md-button>
+                        </div>
+
+                    </form>
+                    <md-button>
+                        <md-icon md-font-set="material-icons">local_grocery_store</md-icon>
+                        0 Item - 0.00$
+                    </md-button>
+                </div>
+            </div>
+            <div hide-gt-sm class="toolbar-separator"></div>
+            <md-button hide-gt-sm class="md-icon-button md-big" ><md-icon md-font-set="material-icons">local_grocery_store</md-icon></md-button>
+            <div hide-gt-sm class="toolbar-separator"></div>
+            <md-button hide-gt-sm class="md-icon-button md-big" ng-click="vm.buildToggler('right')"><md-icon md-font-set="material-icons">menu</md-icon></md-button>
+        </div>
+    </md-toolbar>
+</md-subheader>

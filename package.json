@@ -1,0 +1,23 @@
+{
+  "name": "VendorManager",
+    "version": "0.0.0",
+    "description": "Manager vendor",
+    "dependencies": {
+        "socket.io": "latest",
+        "express": "latest",
+        "ejs": "latest",
+        "multer": "latest",
+        "body-parser" : "latest",
+        "util": "latest",
+        "fs-extra": "latest",
+        "pug": "latest",
+        "request": "latest",
+        "mongoose": "latest",
+        "google-distance": "latest",
+        "crypto": "latest",
+        "bluebird": "latest",
+        "emailjs": "latest",
+        "node-schedule": "latest"
+    },
+    "author": "developer"
+}
